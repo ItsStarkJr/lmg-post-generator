@@ -1,5 +1,5 @@
 
-<div style="background: rgb(200,200,200); padding: 2rem;box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);margin: 1rem;">
+<div style="background: rgb(120,120,120); padding: 2rem;box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);margin: 1rem;">
     <div style="background: rgba(255,255,255,0.5); padding: 1.5rem; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4); margin-bottom: 1rem;">
         <p style="max-width: none; color: rgb(0,0,0); font-size: 1.5rem; margin: 0;"><b>Castle Woku (Castle Wall/Sudoku)</b></p>
         <p style="max-width: none; color: #4f4f4f; margin-top: 0.25rem;"><i>by Wessel Strijkstra</i></p>
@@ -13,8 +13,8 @@
         <img:000GJX>
     </div>
     <div style="background: rgba(255,255,255,0.5); padding: 1.5rem; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4); text-align: center;">
-        <p style="max-width: none; margin-top: 0;color: #4f4f4f;"><b>Solve on:</b></p>
-        <a style="color: #4f4f4f;margin-right: 1rem" href="https://tinyurl.com/2us8mysw"><b>Sudokupad</b></a><a style="color: #4f4f4f;" href="https://f-puzzles.com/?id=2pwhzaqm"><b>F-puzzles</b></a>
+        <p style="max-width: none; margin-top: 0;color: rgb(0,0,0);"><b>Solve on:</b></p>
+        <a style="color: #4f4f4f;margin-right: 1rem" href="https://tinyurl.com/2us8mysw"><b>SUDOKUPAD</b></a><a style="color: #4f4f4f;" href="https://f-puzzles.com/?id=2pwhzaqm"><b>F-PUZZLES</b></a>
         <p style="color: #4f4f4f; margin-bottom: 0;max-width: none"><b>Enjoy!</b></p>
     </div>
 </div>

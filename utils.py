@@ -2,18 +2,18 @@ import json
 import string
 
 
-def strip_casefold(data):
+def strip_casefold(data) -> str:
     """Returns data stripped and lower case."""
     return data.strip().casefold()
 
 
-def check_string_is_empty(data):
+def check_string_is_empty(data) -> bool:
     """Checks if data consists of only whitespace characters."""
     if data.translate({ord(c): None for c in string.whitespace}) == "":
         return True
 
 
-def create_text_file(data, filename):
+def create_text_file(data, filename) -> None:
     try:
         with open(f"post_files/{filename}.txt", "x") as file:
             file.write(data)
@@ -22,7 +22,7 @@ def create_text_file(data, filename):
         print("File already exists.")
 
 
-def write_to_json_file(data, filename):
+def write_to_json_file(data, filename) -> None:
     try:
         with open(filename, "w") as file:
             json.dump(data, file)
@@ -36,11 +36,11 @@ def create_file_name(title) -> str:
     return file_name
 
 
-# def open_json_file(filename):
-#     try:
-#         with open(filename, "r") as file:
-#             file_content = json.load(file)
-#             print(f"\n{filename} loaded.\n")
-#         return file_content
-#     except:
-#         print("Something went wrong.")
+def open_json_file(filename):
+    try:
+        with open(filename, "r") as file:
+            file_content = json.load(file)
+            print(f"\n{filename} loaded.\n")
+        return file_content
+    except:
+        print("Something went wrong.")
