@@ -1,0 +1,7 @@
+BACKGROUND_COLOUR = "rgb(200,200,200)"
+TEXT_CONTAINER_BGC = "rgba(255,255,255,0.5)"
+TITLE_COLOUR = "color: rgb(0,0,0)"
+TEXT_COLOUR = "color: #4f4f4f"
+SHADOW = "box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4)"
+LINKS_MARGIN = "margin-right: 1rem"
+RESET_WIDTH = "max-width: none"

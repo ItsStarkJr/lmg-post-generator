@@ -1,0 +1,31 @@
+<div
+  style="
+    background: rgba(255, 255, 255, 0.5);
+    padding: 1.5rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+    margin-bottom: 1rem;
+  "
+>
+  <p style="margin-top: 0; color: rgb(0, 0, 0)"><b>Rules:</b></p>
+  <ul style="color: #4f4f4f; margin-bottom: 0">
+    <li style="max-width: none">Normal sudoku rules apply.</li>
+    <li style="max-width: none">
+      Castle wall rules: Draw a non-intersecting loop through the centers of
+      some cells. The loop may not enter outlined cells or cells containing
+      clues. White squares must lie inside the loop, while black squares must
+      lie outside the loop. Grey cells may either be inside or outside the loop.
+      A number represents the sum of the lengths of loop segments in the
+      indicated direction.
+    </li>
+    <li style="max-width: none">
+      Directions and values of all castle wall clues have to be determined, if
+      not given. Clues see their amount of loop segments in at least one
+      direction.
+    </li>
+    <li style="max-width: none">
+      A clue outside a row gives the sum of the digits on the first horizontal
+      segment passing through its row (including the cells which it turns),
+      likewise for columns and vertical segments.
+    </li>
+  </ul>
+</div>
