@@ -18,10 +18,6 @@ class Generator:
             "f-puzzles": "https://f-puzzles.com/?id=2pwhzaqm",
         }
 
-    def create_file_name(self) -> str:
-        file_name = "".join(letter for letter in self.title if letter.isalnum())
-        return file_name
-
     def create_rules_string(self) -> str:
         rules_string = ""
         for rule in self.rules:
