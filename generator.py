@@ -11,8 +11,10 @@ class Generator:
         self.title = data_dict["title"]
         self.intro = data_dict["intro"]
         self.rules = data_dict["rules"]
-        self.image_id = data_dict["image_id"]
-        self.links = data_dict["links"]
+        self.main_image_id = data_dict["main_image_id"]
+        self.main_links = data_dict["main_links"]
+        self.example_image_id = data_dict["example_image_id"]
+        self.example_links = data_dict["example_links"]
 
     def create_rules_string(self) -> str:
         rules_string = ""
@@ -42,7 +44,7 @@ class Generator:
         <ul style="{TEXT_COLOUR}; margin-bottom: 0">{self.create_rules_string()}</ul>
     </div>
     <div style="display: inline-block; text-align: center; padding: 10px; background: white;{SHADOW};margin-bottom: 1rem;">
-        <img:{self.image_id}>
+        <img:{self.main_image_id}>
     </div>
     <div style="text-align:left; background: {TEXT_CONTAINER_BGC}; padding: 1.5rem; {SHADOW}; text-align: center;">
         <p style="{RESET_WIDTH}; margin-top: 0;{TITLE_COLOUR};"><b>Solve on:</b></p>
@@ -56,5 +58,5 @@ class Generator:
         create_text_file(self.script_string, create_file_name(self.title))
 
 
-generator = Generator()
-generator.run()
+# generator = Generator()
+# generator.run()

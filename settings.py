@@ -5,3 +5,6 @@ TEXT_COLOUR = "color: #4f4f4f"
 SHADOW = "box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4)"
 LINKS_MARGIN = "margin-right: 1rem"
 RESET_WIDTH = "max-width: none"
+
+NAME = "Wessel Strijkstra"
+LMG_PAGE = "https://logic-masters.de/Raetselportal/Benutzer/eingestellt.php?name=Wessel%20Strijkstra"
