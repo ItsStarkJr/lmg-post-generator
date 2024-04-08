@@ -1,31 +1,27 @@
-<div
-  style="
-    background: rgba(255, 255, 255, 0.5);
-    padding: 1.5rem;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
-    margin-bottom: 1rem;
-  "
->
-  <p style="margin-top: 0; color: rgb(0, 0, 0)"><b>Rules:</b></p>
-  <ul style="color: #4f4f4f; margin-bottom: 0">
-    <li style="max-width: none">Normal sudoku rules apply.</li>
-    <li style="max-width: none">
-      Castle wall rules: Draw a non-intersecting loop through the centers of
-      some cells. The loop may not enter outlined cells or cells containing
-      clues. White squares must lie inside the loop, while black squares must
-      lie outside the loop. Grey cells may either be inside or outside the loop.
-      A number represents the sum of the lengths of loop segments in the
-      indicated direction.
-    </li>
-    <li style="max-width: none">
-      Directions and values of all castle wall clues have to be determined, if
-      not given. Clues see their amount of loop segments in at least one
-      direction.
-    </li>
-    <li style="max-width: none">
-      A clue outside a row gives the sum of the digits on the first horizontal
-      segment passing through its row (including the cells which it turns),
-      likewise for columns and vertical segments.
-    </li>
-  </ul>
+
+<div style="text-align:center; background: rgb(180,180,180); padding: 2rem;box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);margin: 1rem;">
+  <div style="text-align:left; background: rgba(255,255,255,0.5); padding: 1.5rem; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4); margin-bottom: 1rem;">
+      <p style="max-width: none; color: rgb(0,0,0); font-size: 1.5rem; margin: 0;"><b>Prison Break (Kouchoku) with example</b></p>
+      <p style="max-width: none; color: #4f4f4f; margin-top: 0.25rem;"><i>by Wessel Strijkstra</i></p>
+      <p style="max-width: none; color: #4f4f4f; margin-bottom: 0;">I made this puzzle for the lovely <a style="color: #4f4f4f" href="https://logic-masters.de/Raetselportal/Benutzer/eingestellt.php?name=wisty"><b>Wisty</b></a>, as a thank you for her <i>nice</i> donation to the Sudokucon live stream. I think it turned out quite fun:) I wouldn't necessarily recommend solving it if you have no experience with the genre, but who am I to not recommend a Kouch. If you do want some practice beforehand, you can find a couple of them on <a style="color: #4f4f4f" href="https://puzz.link/db/?type=kouchoku"><b>puzz.link</b></a>. Have fun!</p>
+  </div>
+  <div style="text-align:left; background: rgba(255,255,255,0.5); padding: 1.5rem; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4); margin-bottom: 1rem;">
+      <p style="margin-top: 0; color: rgb(0,0,0)"><b>Rules:</b></p>
+      <ul style="color: #4f4f4f; margin-bottom: 0"><li style="max-width: none">Draw lines connecting all clues to form a loop which travels through each clue once.</li><li style="max-width: none">Lines only travel straight from clue to clue (allowing non-orthogonal lines).</li><li style="max-width: none">Two line segments may intersect each other only at a 90° angle.</li><li style="max-width: none">All clues containing the same letter must be connected consecutively.</li><li style="max-width: none">Clues containing different letters may not be directly connected; the loop must travel through at least one black dot between them.</li></ul>
+      <div style="text-align:left; background: rgba(255,255,255,0.5); padding: 1.5rem; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4); text-align: center;margin-bottom: 1rem;">
+        <p>example</p>
+      </div><div style="display: inline-block; text-align: center; padding: 10px; background: white;box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);margin-bottom: 1rem;">
+          <img:000FQK>
+      </div>
+      <p style="max-width: none; margin-top: 0;color: rgb(0,0,0);"><b>Solve example on:</b></p>
+      <a style="color: #4f4f4f;" href="https://puzz.link/p?kouchoku/11/10/w..4.0.d9998hello95.2world93r91.90r2.1h0.1"><b>PUZZ.LINK</b></a>
+  </div>
+  <div style="display: inline-block; text-align: center; padding: 10px; background: white;box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);margin-bottom: 1rem;">
+      <img:000NC9>
+  </div>
+  <div style="text-align:left; background: rgba(255,255,255,0.5); padding: 1.5rem; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4); text-align: center;">
+      <p style="max-width: none; margin-top: 0;color: rgb(0,0,0);"><b>Solve on:</b></p>
+      <a style="color: #4f4f4f;" href="https://puzz.link/p?kouchoku/36/36/y97.91.9991.p97.99995.90.7.2.4.92q7.9995.5.2y0.8z99996g9994.3.5e4z4h4g1p99996.9997y1.8.9x6e99.8p9.90.2.992g5.9z999998.999999990.9992.0.94.8z91.3g9.6.90.991.9.9.92g4.93.1z7a1.2.9999996.1.1g4e4z4h1.99994a99991.2z.9x9.x1b4a9999999993.5w9999aa0.0.1.999990.1.x1w1./"><b>PUZZ.LINK</b></a>
+      <p style="color: #4f4f4f; margin-bottom: 0;max-width: none"><b>Enjoy!</b></p>
+  </div>
 </div>

@@ -44,6 +44,22 @@ class AddScript:
 
     # App setup
 
+    def app_setup(self):
+        customtkinter.set_appearance_mode("dark")
+        customtkinter.set_default_color_theme("blue")
+
+        self.root = customtkinter.CTk()
+        self.root.geometry("1280x1180+300+100")
+        self.root.title("Add Script")
+        self.root.bind("<Escape>", self.close_app)
+
+        self.frame_1 = customtkinter.CTkFrame(master=self.root)
+        self.frame_1.pack(pady=20, padx=60, fill="both", expand=True)
+
+        self.setup_author_frame()
+        self.setup_main_puzzle_frame()
+        self.setup_example_puzzle_frame()
+
     def setup_author_frame(self):
         # Author settings
         self.author_frame = customtkinter.CTkFrame(self.frame_1)
@@ -91,27 +107,14 @@ class AddScript:
         self.profile_link_entry.grid(row=1, column=1, padx=10, pady=10)
         self.update_user_settings_button.grid(row=1, column=2, padx=10, pady=10)
 
-    def app_setup(self):
-        customtkinter.set_appearance_mode("dark")
-        customtkinter.set_default_color_theme("blue")
-
-        self.root = customtkinter.CTk()
-        self.root.geometry("1280x1180+300+100")
-        self.root.title("Add Script")
-        self.root.bind("<Escape>", self.close_app)
-
-        self.frame_1 = customtkinter.CTkFrame(master=self.root)
-        self.frame_1.pack(pady=20, padx=60, fill="both", expand=True)
-
-        self.setup_author_frame()
-
+    def setup_main_puzzle_frame(self):
         # Title frame
 
-        self.title_frame = customtkinter.CTkFrame(self.frame_1)
-        self.title_frame.pack(pady=10)
+        self.main_puzzle_frame = customtkinter.CTkFrame(self.frame_1)
+        self.main_puzzle_frame.pack(pady=10)
 
         self.title_entry = customtkinter.CTkEntry(
-            master=self.title_frame,
+            master=self.main_puzzle_frame,
             placeholder_text="Title",
             width=475,
             fg_color=self.widget_background_colour,
@@ -120,29 +123,9 @@ class AddScript:
             height=40,
         )
 
-        self.filename_entry = customtkinter.CTkEntry(
-            master=self.title_frame,
-            placeholder_text="File name",
-            width=475,
-            fg_color=self.widget_background_colour,
-            corner_radius=0,
-            height=40,
-            border_width=0,
-        )
-
-        self.gist_link_entry = customtkinter.CTkEntry(
-            master=self.title_frame,
-            placeholder_text="Gist link",
-            width=475,
-            fg_color=self.widget_background_colour,
-            corner_radius=0,
-            height=40,
-            border_width=0,
-        )
-
-        self.website_entry = customtkinter.CTkEntry(
-            master=self.title_frame,
-            placeholder_text="Website it works on",
+        self.main_image_id_entry = customtkinter.CTkEntry(
+            master=self.main_puzzle_frame,
+            placeholder_text="Image ID",
             width=475,
             fg_color=self.widget_background_colour,
             corner_radius=0,
@@ -151,25 +134,57 @@ class AddScript:
         )
 
         self.description_label = customtkinter.CTkLabel(
-            master=self.title_frame,
-            text="Description (case sensitive):",
+            master=self.main_puzzle_frame,
+            text="Intro (case sensitive):",
             text_color="grey",
         )
 
         self.description_box = customtkinter.CTkTextbox(
-            master=self.title_frame,
+            master=self.main_puzzle_frame,
+            width=1020,
+            height=100,
+            fg_color=self.widget_background_colour,
+            corner_radius=0,
+        )
+
+        self.rules_label = customtkinter.CTkLabel(
+            master=self.main_puzzle_frame,
+            text="Rules (case sensitive):",
+            text_color="grey",
+        )
+
+        self.rules_box = customtkinter.CTkTextbox(
+            master=self.main_puzzle_frame,
             width=1020,
             height=150,
             fg_color=self.widget_background_colour,
             corner_radius=0,
         )
 
+        self.links_label = customtkinter.CTkLabel(
+            master=self.main_puzzle_frame,
+            text="Links (case sensitive):",
+            text_color="grey",
+        )
+
+        self.links_box = customtkinter.CTkTextbox(
+            master=self.main_puzzle_frame,
+            width=1020,
+            height=75,
+            fg_color=self.widget_background_colour,
+            corner_radius=0,
+        )
+
         self.title_entry.grid(row=0, column=0, padx=10, pady=10)
-        self.filename_entry.grid(row=0, column=1, padx=10, pady=10)
-        self.gist_link_entry.grid(row=1, column=0, padx=10, pady=10)
-        self.website_entry.grid(row=1, column=1, padx=10, pady=10)
-        self.description_label.grid(row=2, column=0, padx=10)
-        self.description_box.grid(row=3, column=0, columnspan=2, padx=10, pady=10)
+        self.main_image_id_entry.grid(row=0, column=1, padx=10, pady=10)
+        self.description_label.grid(
+            row=2, column=0, columnspan=2, padx=10, pady=(10, 0)
+        )
+        self.description_box.grid(row=3, column=0, columnspan=2, padx=10)
+        self.rules_label.grid(row=4, column=0, columnspan=2, padx=10, pady=(10, 0))
+        self.rules_box.grid(row=5, column=0, columnspan=2, padx=10)
+        self.links_label.grid(row=6, column=0, columnspan=2, padx=10, pady=(10, 0))
+        self.links_box.grid(row=7, column=0, columnspan=2, padx=10)
 
         self.buttons_frame = customtkinter.CTkFrame(self.frame_1)
         self.buttons_frame.pack(pady=10)
@@ -197,18 +212,15 @@ class AddScript:
         self.submit_button.grid(row=0, column=0, padx=10, pady=10)
         self.update_html_button.grid(row=0, column=1, padx=10, pady=10)
 
+    def setup_example_puzzle_frame(self):
+        pass
+
     def get_title(self):
         self.title = self.title_entry.get().strip()
         self.new_script_data["title"] = self.title
 
     def get_filename(self):
-        self.filename = self.filename_entry.get().strip()
-
-    def get_gist_link(self):
-        self.gist_link = self.gist_link_entry.get().strip()
-
-    def get_website(self):
-        self.new_script_data["website"] = self.website_entry.get().strip()
+        self.filename = self.main_image_id_entry.get().strip()
 
     def get_description(self):
         self.new_script_data["description"] = self.description_box.get(

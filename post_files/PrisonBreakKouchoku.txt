@@ -9,10 +9,16 @@
         <p style="margin-top: 0; color: rgb(0,0,0)"><b>Rules:</b></p>
         <ul style="color: #4f4f4f; margin-bottom: 0"><li style="max-width: none">Draw lines connecting all clues to form a loop which travels through each clue once.</li><li style="max-width: none">Lines only travel straight from clue to clue (allowing non-orthogonal lines).</li><li style="max-width: none">Two line segments may intersect each other only at a 90° angle.</li><li style="max-width: none">All clues containing the same letter must be connected consecutively.</li><li style="max-width: none">Clues containing different letters may not be directly connected; the loop must travel through at least one black dot between them.</li></ul>
     </div>
-    <div style="display: inline-block; text-align: center; padding: 10px; background: white;box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);margin-bottom: 1rem;">
-        <img:000NC9>
+    
+    <div style="text-align:left; background: rgba(255,255,255,0.5); padding: 1.5rem; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4); text-align: center;margin-bottom: 1rem;">
+        <p style="max-width: none; margin-top: 0;color: rgb(0,0,0);"><b>Example</b></p>
+        <div style="display: inline-block; text-align: center; padding: 10px; background: white;box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);margin-bottom: 1rem;"><img:000FQK></div>
+        <p style="max-width: none; margin-top: 0;color: rgb(0,0,0);"><b>Solve example on:</b></p>
+        <a style="color: #4f4f4f;" href="https://puzz.link/p?kouchoku/11/10/w..4.0.d9998hello95.2world93r91.90r2.1h0.1"><b>PUZZ.LINK</b></a>
     </div>
     <div style="text-align:left; background: rgba(255,255,255,0.5); padding: 1.5rem; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4); text-align: center;">
+        <p style="max-width: none; margin-top: 0;color: rgb(0,0,0);"><b>Main puzzle</b></p>
+        <div style="display: inline-block; text-align: center; padding: 10px; background: white;box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);margin-bottom: 1rem;"><img:000NC9></div>
         <p style="max-width: none; margin-top: 0;color: rgb(0,0,0);"><b>Solve on:</b></p>
         <a style="color: #4f4f4f;" href="https://puzz.link/p?kouchoku/36/36/y97.91.9991.p97.99995.90.7.2.4.92q7.9995.5.2y0.8z99996g9994.3.5e4z4h4g1p99996.9997y1.8.9x6e99.8p9.90.2.992g5.9z999998.999999990.9992.0.94.8z91.3g9.6.90.991.9.9.92g4.93.1z7a1.2.9999996.1.1g4e4z4h1.99994a99991.2z.9x9.x1b4a9999999993.5w9999aa0.0.1.999990.1.x1w1./"><b>PUZZ.LINK</b></a>
         <p style="color: #4f4f4f; margin-bottom: 0;max-width: none"><b>Enjoy!</b></p>
