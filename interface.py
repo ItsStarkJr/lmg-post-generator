@@ -12,6 +12,7 @@ class AddScript:
         self.get_user_settings()
         self.app_setup()
         self.new_script_data = {}
+        self.has_example = False
 
     # User settings
 
@@ -107,6 +108,21 @@ class AddScript:
         self.profile_link_entry.grid(row=1, column=1, padx=10, pady=10)
         self.update_user_settings_button.grid(row=1, column=2, padx=10, pady=10)
 
+    def include_example(self):
+        if self.include_example_box.get() == 1:
+            self.setup_example_puzzle_frame()
+            self.example_image_id_entry.grid(row=8, column=1, padx=10, pady=10)
+            self.example_links_label.grid(
+                row=9, column=0, columnspan=3, padx=10, pady=(10, 0)
+            )
+            self.example_links_box.grid(
+                row=10, column=0, columnspan=3, padx=10, pady=(0, 10)
+            )
+        else:
+            self.example_image_id_entry.destroy()
+            self.example_links_label.destroy()
+            self.example_links_box.destroy()
+
     def setup_main_puzzle_frame(self):
         # Title frame
 
@@ -116,7 +132,7 @@ class AddScript:
         self.title_entry = customtkinter.CTkEntry(
             master=self.main_puzzle_frame,
             placeholder_text="Title",
-            width=475,
+            width=300,
             fg_color=self.widget_background_colour,
             corner_radius=0,
             border_width=0,
@@ -126,16 +142,26 @@ class AddScript:
         self.main_image_id_entry = customtkinter.CTkEntry(
             master=self.main_puzzle_frame,
             placeholder_text="Image ID",
-            width=475,
+            width=300,
             fg_color=self.widget_background_colour,
             corner_radius=0,
             height=40,
             border_width=0,
         )
 
+        # check_var = customtkinter.StringVar(value="on")
+
+        self.include_example_box = customtkinter.CTkCheckBox(
+            master=self.main_puzzle_frame,
+            text="Include example",
+            command=self.include_example,
+            corner_radius=0,
+        )
+        self.include_example_box.deselect()
+
         self.description_label = customtkinter.CTkLabel(
             master=self.main_puzzle_frame,
-            text="Intro (case sensitive):",
+            text="Intro:",
             text_color="grey",
         )
 
@@ -149,7 +175,7 @@ class AddScript:
 
         self.rules_label = customtkinter.CTkLabel(
             master=self.main_puzzle_frame,
-            text="Rules (case sensitive):",
+            text="Rules:",
             text_color="grey",
         )
 
@@ -163,7 +189,7 @@ class AddScript:
 
         self.links_label = customtkinter.CTkLabel(
             master=self.main_puzzle_frame,
-            text="Links (case sensitive):",
+            text="Links:",
             text_color="grey",
         )
 
@@ -177,14 +203,15 @@ class AddScript:
 
         self.title_entry.grid(row=0, column=0, padx=10, pady=10)
         self.main_image_id_entry.grid(row=0, column=1, padx=10, pady=10)
+        self.include_example_box.grid(row=0, column=2, padx=10, pady=10)
         self.description_label.grid(
-            row=2, column=0, columnspan=2, padx=10, pady=(10, 0)
+            row=2, column=0, columnspan=3, padx=10, pady=(10, 0)
         )
-        self.description_box.grid(row=3, column=0, columnspan=2, padx=10)
-        self.rules_label.grid(row=4, column=0, columnspan=2, padx=10, pady=(10, 0))
-        self.rules_box.grid(row=5, column=0, columnspan=2, padx=10)
-        self.links_label.grid(row=6, column=0, columnspan=2, padx=10, pady=(10, 0))
-        self.links_box.grid(row=7, column=0, columnspan=2, padx=10)
+        self.description_box.grid(row=3, column=0, columnspan=3, padx=10)
+        self.rules_label.grid(row=4, column=0, columnspan=3, padx=10, pady=(10, 0))
+        self.rules_box.grid(row=5, column=0, columnspan=3, padx=10)
+        self.links_label.grid(row=6, column=0, columnspan=3, padx=10, pady=(10, 0))
+        self.links_box.grid(row=7, column=0, columnspan=3, padx=10, pady=(0, 10))
 
         self.buttons_frame = customtkinter.CTkFrame(self.frame_1)
         self.buttons_frame.pack(pady=10)
@@ -213,7 +240,27 @@ class AddScript:
         self.update_html_button.grid(row=0, column=1, padx=10, pady=10)
 
     def setup_example_puzzle_frame(self):
-        pass
+        self.example_image_id_entry = customtkinter.CTkEntry(
+            master=self.main_puzzle_frame,
+            placeholder_text="Example Image ID",
+            width=300,
+            fg_color=self.widget_background_colour,
+            corner_radius=0,
+            height=40,
+            border_width=0,
+        )
+        self.example_links_label = customtkinter.CTkLabel(
+            master=self.main_puzzle_frame,
+            text="Example Links:",
+            text_color="grey",
+        )
+        self.example_links_box = customtkinter.CTkTextbox(
+            master=self.main_puzzle_frame,
+            width=1020,
+            height=75,
+            fg_color=self.widget_background_colour,
+            corner_radius=0,
+        )
 
     def get_title(self):
         self.title = self.title_entry.get().strip()
